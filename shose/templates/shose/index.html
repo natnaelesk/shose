@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 20vw;
+            height: 30vh;
+            background-position: center;
+            background-size: cover;
+            background-image: url('kid.jpg');
+        }
+    </style>
+</head>
+<body>
+
+<div id="box"></div>
+
+
+
+
+
+
+
+    <script   defer>
+        var x = document.getElementById("box");
+        var y  =  document.getElementById("main-img");
+
+        x.addEventListener("click" ,  function (){
+            x.style.backgroundImage = "url('men1.jpg')";
+            
+        })
+     </script>
+</body>
+</html>

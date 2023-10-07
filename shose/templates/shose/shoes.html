@@ -1,0 +1,28 @@
+{% extends 'shose/base.html' %}
+{%  load static  %}
+{% block content %}
+<div class="card-main ">
+
+            {% for shose in shoses %}
+        <a href="/chart/ {{ shose.id }} " type="">
+          <div class="card">
+            <div style="background-image: url('{{ shose.photo.url }}');"  class="card-img"></div>
+            <div class="card-det">
+                <h3 class="card-br"> 
+                  {{shose.brand}}
+
+                </h3>
+                <h5 class="card-name">
+                  {{shose.name}}
+                </h5>
+                <p class="card-price">
+                  ${{shose.price}}
+                </p>
+            </div>
+          </div>
+          </a>
+  {% endfor %}
+
+
+</div>
+  {% endblock %}

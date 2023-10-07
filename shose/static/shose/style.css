@@ -1,0 +1,572 @@
+:root{
+  --gap : 2px;
+  --orange : orange;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.head{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 10vh;
+  border-bottom: 1px solid gray ;
+ 
+
+}
+.navigation > ul {
+  display: flex;
+  gap: 50px;
+  width: 100%;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+
+nav {
+  height: 100%;
+  padding: 0 10px;
+  width: fit-content;
+}
+.nav-item{
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid transparent;
+  list-style-type: none;
+}
+.nav-item:hover{
+ 
+  border-bottom: 3px solid var(--orange);
+}
+nav a{
+  color: gray;
+  text-decoration: none;
+}
+.profile{
+  width: 80px;
+  height: 80px;
+  border: 2px solid ;
+  border-radius: 50%;
+}
+.logo{
+  width: 170px;
+}
+.chart{
+  width: 30px;
+  height: 30px;
+  background-image: url('images/icon-cart.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+ 
+}
+#profil-chart {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}z
+main{
+  width: 80%;
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.description{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+.trend{
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+.backg{
+  width: 600px;
+  height: 600px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+}
+.trend-pic{
+  position: absolute;
+  height: 75%;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+}
+#heading{
+font-size: 120px;}
+.det{
+  display: flex;
+  height: 50%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.collection{
+  width: 80%;
+  height: 50vh;
+  border-top: 1px solid grey;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  gap: 20px;
+  padding: 1% 0 ;
+
+}
+.box{
+  width: 30%;
+  height: 90%;
+  text-decoration: none;
+  color: black;
+  border-bottom: 3px solid transparent;
+  padding: 20px;
+  position: relative;
+}
+
+.box::before{
+  color: black;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 5rem;
+  height: 2px;
+  background-color:black;
+  transition: .4s , color .4s;
+}
+.box:hover::before 
+{
+  background-color: orange;
+  color: orange;
+  width: 9.5rem;
+}
+.box1{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+}
+.i-s01{
+  background-image: url("images/men.jpeg");
+}
+.i-s02{
+  background-image: url('images/women.jpeg');
+}
+.i-s03{
+  background-image: url('images/kid.jpeg');
+}
+
+
+.item-shose{
+  width: 100%;
+  height: 85%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.brand{
+margin-top: 5%;
+width: 80%;
+height: 80vh;
+}
+.baner{
+width: 100%;
+height: 40%;
+background-image: url('images/collection.jpeg');
+background-size: cover;
+border-radius: 10px;
+}
+.brand-log{
+width: 100%;
+height: 15%;
+margin-top: 5%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+.br-lg{
+
+  border-radius: 10px;
+display: flex;
+justify-content: center ;
+align-items: center;
+background-color: orangered;
+width: 20%;
+height: 80%;
+}
+.footer{
+width: 100%;
+color: white;
+}
+.my-5{
+margin: 0 !important;
+}
+.me-5{
+color: black;
+}
+.men{
+  display: flex;
+  width: 100vw;
+  height: fit-content;
+  justify-content: unset;
+  align-items: unset;
+}
+.men > aside{
+  position: relative;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  width: 20%;
+}
+.aside{
+  
+  color: black;
+  text-decoration: none;
+}
+.list-shose{
+  width: 80%;
+  padding: 30px;
+}
+.card-shose{
+
+  border: 1px solid gray;
+  width: 20%;
+  height: 420px;
+  float: left;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+.card-shose-img{
+  width: 100%;
+  border-bottom: 1px solid  ;
+}
+.side-nav-item{
+  list-style: none;
+  padding: 3px;
+  display: flex;
+  gap: 10px;
+}
+.side-nav{
+  position: fixed;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  height: 50vh;
+  padding: 20px;
+  border-right: 1px solid gray;
+}
+.-cd {
+  padding: 0px 0px 5px 10px;
+  }
+
+  .br-card {
+    text-transform: uppercase;
+    font-size: 24px;
+}
+.nm-card {
+    font-size: 16px;
+}
+.pr-card{
+    font-size: 14px;
+}
+
+
+@media (max-width : 1200px ){
+  .card-shose{
+  width: 35%;
+}
+.men > aside{
+  width: 30%;
+}
+.baner{
+  width: 100%;
+  height: 40%;
+  background-image: url('images/collection.jpeg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  }
+}
+@media (max-width : 1200px) {
+  .baner{
+    width: 100%;
+    height: 40%;
+    background-image: url('images/collection.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    }
+  .navigation > ul {
+      gap: 20px;
+    }
+  .profile{
+      width: 60px;
+      height: 60px;
+      
+  }
+  .logo{
+      width: 120px;
+  }
+  #profil-chart {
+      gap: 30px;
+
+  }
+  main{
+      width: 80%;
+      height: 90vh;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .description{
+      width: 100%;
+      height: 50%;
+  }
+  .trend{
+      width: 100%;
+      height: 50%;
+  }
+  .backg{
+      width: 400px;
+      height: 400px;
+  }
+  .trend-pic{
+      height: 95%;
+  }
+  #heading{
+      font-size: 100px;}
+      .box{
+          height: 300px;
+      }
+
+  
+}
+
+@media (max-width : 770px) {
+  .collection{
+    width: 80%;
+    height: 100vh;
+    border-top: 1px solid grey;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 1% 0 ;
+  
+  }
+  .box{
+    width: 30%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    border-bottom: 3px solid transparent;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .navigation > ul {
+      gap: 20px;
+    }
+  .profile{
+      width: 50px;
+      height: 50px;
+      
+  }
+  .logo{
+      width: 120px;
+  }
+  .navigation{
+  }
+  #profil-chart {
+      gap: 20px;
+
+  }
+  .navigation{
+      position: absolute;
+      z-index: 1;
+      background-color: bisque;
+      top: 0;
+      left: 100%;
+      width: 40vw;
+
+
+  }
+
+.navigation > ul {
+
+  margin-top: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+  justify-content: baseline;
+  height: 10%;
+  align-items: center;
+}
+
+nav {
+
+  height: 100%;
+  padding: 0 10px;
+  width: fit-content;
+  display: flex;
+  justify-content: start;
+}
+.nav-item{
+  
+  justify-self: left;
+  height: 100%;
+  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid transparent;
+  list-style-type: none;
+}
+.nav-item a {
+  width: 70%;
+  color: black;
+}
+.backg{
+  width: 300px;
+  height: 300px;
+}
+.trend-pic{
+  height: 85%;
+}
+#heading{
+  font-size: 68px;}
+  .box{
+      width: 100%;
+  }
+  .br-card {
+    font-size: 12px;
+}
+.nm-card {
+    font-size: 11px;
+}
+.pr-card{
+    font-size: 10px;
+}
+.men{
+display: flex;
+flex-direction: column;
+}
+.men > aside{
+padding: 5px;
+height: 150px;
+width: 100vw;
+display: flex;
+justify-content: right;
+align-items: top;
+padding-top: 10%;
+border-right: 0px solid gray;
+}
+.side-nav{
+position: fixed;
+top: 0px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: 20px;
+height: 10%;
+width: 100%;
+padding: 20px;
+border-right: 0px solid gray;
+background-color: aliceblue;
+border-bottom: 0px solid gray;
+}
+.aside{
+font-size: 10px;
+color: black;
+text-decoration: none;
+}
+.list-shose{
+width: 100%;
+}
+.card-shose{
+width: 45%;
+
+}
+.side-nav-item{
+list-style: none;
+padding: 3px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+main{
+  height: fit-content;
+  position: relative;
+}
+.trend{
+  position: relative;
+}
+.trend{
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+.backg{
+  position: relative;
+  top: unset;
+  right: unset;
+  transform:unset;
+}
+.trend-pic{
+  position: absolute;
+  height: 75%;
+  top: unset;
+  right: unset;
+  transform:unset;
+}
+
+}

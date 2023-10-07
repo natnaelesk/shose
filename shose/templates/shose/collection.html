@@ -1,0 +1,76 @@
+{% extends 'shose/base.html' %}
+{% load static %}
+{% block content %}
+<main>
+    <body>
+        <section class="langing">
+            <div class="det-landing">
+                <h1 class="landing-header">
+                    Epic React  <br>
+                        2  Flynkit <br>
+                        Shoe.
+                </h1>
+                <h2 class="landing-price">
+                    $125.00
+                </h2>
+                <div class="btn-sh">
+                    <a href="/chart/1"><button class="landing-shop">
+                    SHOP NOW
+                </button></a>
+                </div>
+            </div>
+            <div class="landing-sh">
+                <img src="{% static 'shose/bg.png' %}" class="bg-des">
+                <img src="{%  static 'shose/shoes.png'  %}" class="trend-sh" alt="">
+                <div class="landing-bg"></div>
+                <h1 class="landing-hiden">
+                    NIKE
+                </h1>
+            </div>
+        </section>
+    </main>
+
+    <section class="catag">
+       <a href="/Men"><div class="catag-1 catag-pg">
+            <h3>Men</h3>
+        </div></a> 
+        <a href="/Women"><div class="catag-2 catag-pg">
+            <h3>Women</h3>
+        </div></a>
+        <a href="/Kid"><div class="catag-3 catag-pg">
+            <h3>Kid</h3>
+        </div></a> 
+    </section>
+    <section class="brands">
+        
+        <h1 id="brand">
+            BRAND
+        </h1>
+        
+        <a href="/nike"class="br"><div >
+            <h1 class="brand-name">
+               NIKE
+            </h1>
+        </div></a>
+        
+        <a href="/adidas"class="br"><div >
+            <h1 class="brand-name">
+                ADIDAS
+            </h1>
+        </div></a>
+        
+        <a href="/new balance"class="br"><div >
+            <h1 class="brand-name">
+                NEW BALANCE
+            </h1>   
+        </div></a>
+ 
+    
+        <a href="/converse" class="br"><div >
+            <h1 class="brand-name">
+                COVERSE
+            </h1> 
+        </div></a>
+   
+    </section>
+    {%  endblock content%}

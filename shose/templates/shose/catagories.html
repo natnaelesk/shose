@@ -1,0 +1,35 @@
+{% extends 'shose/base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="men">
+    <aside class="">
+        <ul class="side-nav">
+            <li class="side-nav-item"><input type="checkbox" name="nike" id=""><a class="aside" href="">NIKE</a></li>
+            <li class="side-nav-item"><input type="checkbox" name="adidas" id=""><a class="aside" href="">ADIDAS</a></li>
+            <li class="side-nav-item"><input type="checkbox" name="new-balance" id=""><a class="aside" href="">NEW BALANCE</a></li>
+            <li class="side-nav-item"><input type="checkbox" name="converse" id=""><a class="aside" href="">CONVERSE</a></li>
+        </ul>
+    </aside>
+    <div class="list-shose">
+        {% for shose in shoses %}
+        <div class="card-shose">
+            <a class="aside " href="/chart/ {{ shose.id }} " type="">
+                <img class="card-shose-img" src="{{ shose.photo.url }}" class="card-shose-img" alt="">
+                <div class="card-shose-det">
+                    <h3 class="br-card -cd" >
+                        {{shose.brand}}
+                    </h3>
+                    <h4 class="nm-card -cd">
+                        {{shose.name}}
+                    </h4>
+                    <p class="pr-card -cd">
+                        ${{shose.price}}
+                    </p>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

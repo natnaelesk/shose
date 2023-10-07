@@ -1,0 +1,19 @@
+{% extends  'shose/base.html'%}
+
+     {%   block content %}
+     <style>
+        *{
+            display: block;
+        }
+     </style>
+        <form method="post">
+            {% csrf_token %}
+           <input type="text" name="name" id="" placeholder="name">
+           <input type="text" name="brand" id="" placeholder="brand" >
+           <input type="file" name="photo" id="" placeholder="photo" >
+           <input type="text" name="det" id="" placeholder="det">
+           <input type="number" name="price" id="" placeholder="price" >
+           <input type="text" name="collection" id="" placeholder="collection-type">
+           <input type="submit" value=" submit">
+        </form>
+     {% endblock content %}

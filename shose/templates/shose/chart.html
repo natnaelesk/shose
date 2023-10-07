@@ -1,0 +1,104 @@
+{% extends 'shose/base.html' %}
+{% load static %}
+{% block content %}
+<style>
+
+ </style>
+    <main class="main">
+        <div class="show ">
+            <div  class="main-img">
+                <div style=" background-image: url('{{ data.photo.url }}');" id="main-img" class="m-ig"></div>
+            </div>
+            <div class="options ">
+                <div class="opt">
+                    <div style="background-image: url('{{ data.photo_extra_1.url }}');"  id="op-1" class="opt-img">
+
+                    </div>
+                </div>
+                <div class="opt">
+                    <div style="background-image: url('{{ data.photo_extra_2.url }}');" id="op-2"  class="opt-img">
+
+                    </div>
+                </div><div class="opt">
+                    <div  style="background-image: url('{{ data.photo_extra_3.url }}');" id="op-3" class="opt-img">
+
+                    </div>
+                </div>
+                <div class="opt">
+                    <div style="background-image: url('{{ data.photo_extra_4.url }}');"  id="op-4" class="opt-img">
+
+                    </div>
+                </div>
+
+               
+            </div>
+        </div>
+        <div class="chart-det">
+            <h1 class="chart-br">
+                {{data.brand}}
+            </h1>
+            <h3 class="chart-name">
+                {{ data.name}} 
+            </h3>
+            <p class="chat-description">
+               
+                {{ data.det }}    
+            </p>
+            <h3 class="chart-price">
+                ${{data.price}}
+            </h3>
+            <div class="btn-sh chart-btn">
+                <form action="/chart/{{ data.id }}" method="post">
+                   {% csrf_token %}
+                    <button class="landing-shop" value="{{ data.id }}" type="submit" >
+                ADD TO CART
+            </button>
+                </form>
+            </div>
+        </div>
+        
+     
+    </main>
+    
+    <script   defer>
+        let pic_1 = document.getElementById("op-1");
+        let pic_2 = document.getElementById("op-2");
+        let pic_3 = document.getElementById("op-3");
+        let pic_4 = document.getElementById("op-4");
+
+        var y  =  document.getElementById("main-img");
+
+        pic_1.addEventListener("click" ,  function (){
+            y.style.backgroundImage = "url({{ data.photo_extra_1.url }})";
+            
+        })
+        pic_2.addEventListener("click" ,  function (){
+            y.style.backgroundImage = "url({{ data.photo_extra_2.url }})";
+            
+        })
+        pic_3.addEventListener("click" ,  function (){
+            y.style.backgroundImage = "url({{ data.photo_extra_3.url }})";
+            
+        })
+        pic_4.addEventListener("click" ,  function (){
+            y.style.backgroundImage = "url({{ data.photo_extra_4.url }})";
+            
+        })
+        let some =  [];
+        let d = {};
+        function buy(){
+            d.name = '{{ data.name}} ';
+            d.brand = '{{ data.brand}} ';
+            d.photo = '{{ data.photo}} ';
+            d.price = '{{ data.price}} ';
+            some.append(d);
+        };
+        
+        for (let i in some){
+         document.querySelector(".cart-show").innerHTML = document.createElement('h1').innerHTML = "here we go!";
+        };
+
+
+
+     </script>
+    {% endblock %}
